@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const controllers = require("../controllers/petControllers")
+const controllers = require("../controllers/petControllers/petExports")
 
 // Rota de teste
 router.get("/", controllers.helloWorld);
