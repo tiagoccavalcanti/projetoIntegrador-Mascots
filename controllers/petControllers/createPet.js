@@ -1,6 +1,6 @@
 const { PersonRegister, Address, Contact, Role, Pet, Patient, Cage, Treatment, Medication, PatientsDailyChart } = require("../../db/models/modelSequelize")
 
-async function createPet (req, res){
+/* async function createPet (req, res){
     const { name, species, breed, color, weight, sex, age, photo, behavior, neurologicalDisorders, notes } = req.body;
     try {
       const newPet = await Pet.create({
@@ -16,6 +16,15 @@ async function createPet (req, res){
         neurologicalDisorders,
         notes
       });
+      res.status(201).json(newPet);
+    } catch (error) {
+      res.status(500).json({ error: 'Erro ao criar um novo pet.' + error });
+    }
+  }; */
+  
+  async function createPet (req, res){
+    try {
+      const newPet = await Pet.create(req.body);
       res.status(201).json(newPet);
     } catch (error) {
       res.status(500).json({ error: 'Erro ao criar um novo pet.' + error });
