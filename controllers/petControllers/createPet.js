@@ -31,6 +31,6 @@ const { PersonRegister, Address, Contact, Role, Pet, Patient, Cage, Treatment, M
     }
   };
 
-  module.exports = {
-    createPet
-  }
+module.exports = {
+  createPet
+}
